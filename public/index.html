@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Shared Diary | Capture Your Memories</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🌸 Shared Diary</h1>
+        <p>Your personal space for precious moments</p>
+    </header>
+
+    <main class="container">
+        <!-- Add Memory Section -->
+        <section class="card add-memory-section">
+            <h2>Add a New Memory</h2>
+            <form id="memoryForm">
+                <div class="form-group">
+                    <input type="text" id="recipient" placeholder="Who is this for? (e.g., Mom, Bestie, Me)" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Recipient's Email (Optional)">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="title" placeholder="What's the occasion? (Title)" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="desc" placeholder="Write the memory or message here..." rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="reminder">Date to Notify:</label>
+                    <input type="date" id="reminder" required>
+                </div>
+                <div class="form-group">
+                    <label for="imageInput">Add a Picture (Optional):</label>
+                    <input type="file" id="imageInput" accept="image/*">
+                </div>
+                <button type="submit" class="btn-primary">Set Reminder 🔔</button>
+            </form>
+        </section>
+
+        <!-- On This Day Section (Hidden if no matches) -->
+        <section id="onThisDay" class="on-this-day card" style="display: none;">
+            <h3>✨ On This Day</h3>
+            <div id="onThisDayList"></div>
+        </section>
+
+        <!-- Memory List Section -->
+        <section class="memory-list-container">
+            <div class="list-header">
+                <h2>Saved Reminders</h2>
+                <div class="filter-group">
+                    <input type="text" id="searchInput" placeholder="Search by name or title...">
+                </div>
+            </div>
+            <div id="memoryList" class="memory-grid">
+                <!-- Memories will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Custom Modal for Reminders -->
+    <div id="reminderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="celebration-icon">🎁</div>
+                <h3 id="modalGreeting">A Special Message for You!</h3>
+                <div id="imagePreviewContainer" style="margin: 15px 0; display: none;">
+                    <img id="modalImage" src="" alt="Memory Picture" style="max-width: 100%; border-radius: 8px; max-height: 250px; object-fit: cover;">
+                </div>
+                <div id="reminderContent"></div>
+                <button class="btn-primary" id="closeModalBtn">I Remember! ❤️</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">Memory Saved! ✨</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

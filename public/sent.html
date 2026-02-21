@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sent Memories - Remember This</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .memory-card {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .memory-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 0.5rem;
+        }
+        .memory-info {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        .status-pending { background-color: #ffc107; color: #000; }
+        .status-shown { background-color: #28a745; color: #fff; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <span id="welcome-msg">Loading...</span>
+            <div class="nav-links">
+                <a href="/dashboard">Dashboard</a>
+                <a href="/history">Received</a>
+                <a href="/sent" class="active">Sent</a>
+                <button id="logout-btn">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 800px;">
+        <h2>Sent Memories</h2>
+        <div id="sent-list" class="memory-grid">
+            <!-- Sent memories will be populated here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
