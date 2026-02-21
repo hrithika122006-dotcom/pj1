@@ -53,8 +53,9 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
     2.  Select a **Future Date** using the date picker.
     3.  Enter the **Username** of another registered user. (Note: You can register a second account in a private/incognito window to test this!)
     4.  Click **"Send Memory"**.
-![alt](Screenshot 2026-02-21 160104)
-)
+  
+![alt](Screenshot 2026-02-21 160104.jpg)
+
 ### 3. Receiving a Memory (The Popup)
 - Log in as the **Recipient** user.
 - If the current date is **on or after** the date selected by the sender, a **popup notification** will automatically appear as soon as you land on any page (Dashboard, History, etc.).
