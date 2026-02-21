@@ -53,7 +53,7 @@ Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
     2.  Select a **Future Date** using the date picker.
     3.  Enter the **Username** of another registered user. (Note: You can register a second account in a private/incognito window to test this!)
     4.  Click **"Send Memory"**.
-![alt](<img width="1920" height="1080" alt="Screenshot 2026-02-21 160104" src="https://github.com/user-attachments/assets/43a05177-051a-4da3-a26f-4ccbab5924ba" />
+![alt](Screenshot 2026-02-21 160104)
 )
 ### 3. Receiving a Memory (The Popup)
 - Log in as the **Recipient** user.
